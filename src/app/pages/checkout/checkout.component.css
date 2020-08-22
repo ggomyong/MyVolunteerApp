@@ -1,3 +1,16 @@
 #cart-summary {
     width: 100%;
 }
+
+#totalAmount {
+    font-size: 20px;
+    margin-top: 5px;
+}
+
+#destination {
+    float: right;
+}
+
+#payment-module {
+    float: left;
+}
