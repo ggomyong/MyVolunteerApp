@@ -12,7 +12,7 @@ export class CheckoutComponent implements OnInit {
 
   destinations = [
     {value: 'Hospital'},
-    {value: 'Nurinsg home'},
+    {value: 'Nursing home'},
     {value: 'Orphanage'}
   ];
 
@@ -39,6 +39,10 @@ export class CheckoutComponent implements OnInit {
     }
   }
   processPaypal() {
+    if (this.selectedDestination=='') {
+      alert('No location is set.');
+      return;
+    }
     document.forms["paypalForm"].submit();
   }
 }
