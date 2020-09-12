@@ -44,6 +44,7 @@ import { ShoppingCartComponent } from './core/shopping-cart/shopping-cart.compon
 import { FormsModule } from '@angular/forms';
 import { HeaderComponent } from './core/header/header.component';
 import { CheckoutComponent } from './pages/checkout/checkout.component';
+import { LandingComponent } from './pages/landing/landing.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +54,8 @@ import { CheckoutComponent } from './pages/checkout/checkout.component';
     ActivityComponent,
     ShoppingCartComponent,
     HeaderComponent,
-    CheckoutComponent
+    CheckoutComponent,
+    LandingComponent
   ],
   imports: [
 

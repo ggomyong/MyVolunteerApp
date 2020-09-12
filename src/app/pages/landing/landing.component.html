@@ -1,0 +1,24 @@
+<div id="banner">
+    <img id="main_img" src="../../../assets/images/pexels-matthias-zomer-339621.jpg">
+    <div class="centered">
+        <h1>Yong's Volunteer</h1>
+        <h3>Spreading Love Around The World</h3>
+        <h3>Begins In Community</h3>
+    </div>
+</div>
+<mat-grid-list cols="3">
+    <mat-grid-tile *ngFor="let page of pages">
+      <mat-card class="product-card">
+        <mat-card-header>
+          <mat-card-title>{{page.title}}</mat-card-title>
+          <mat-card-subtitle>{{page.subtitle}}</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content class="card-content">
+          <img class="card-images" src="{{page.img}}">
+        </mat-card-content>
+        <mat-card-actions class="card-action">
+          <a mat-raised-button routerLink="{{page.url}}">Go</a>
+        </mat-card-actions>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
