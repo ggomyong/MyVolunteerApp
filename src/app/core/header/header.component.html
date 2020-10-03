@@ -1,5 +1,5 @@
-<mat-toolbar color="primary">
-  <div class="toolbar" layout-align="center center">
+<mat-toolbar color="primary" (window:resize)="sizeChange()">
+  <div *ngIf="screenSize>=686" class="toolbar" layout-align="center center">
     <a mat-button routerLink="/"><mat-icon>apps</mat-icon> My Volunteer App</a>
     <a mat-button routerLink="/who-we-are"><mat-icon>face</mat-icon> Who We Are</a>
     <a mat-button routerLink="/buy-from-us"><mat-icon>shopping_cart</mat-icon> Buy From Us</a>
@@ -7,6 +7,21 @@
     <span flex></span>
     <app-shopping-cart class="pull-right" routerLink="/checkout"></app-shopping-cart>
   </div>
-    
-
+  <div *ngIf="screenSize<686">
+    <mat-toolbar-row>
+      <button (click)="toggle()" class="mat-button"><mat-icon>menu</mat-icon></button>
+      <app-shopping-cart class="pull-right" routerLink="/checkout"></app-shopping-cart>
+    </mat-toolbar-row>
+    <div *ngIf="toggled">
+      <mat-toolbar-row>
+        <a mat-button routerLink="/who-we-are"><mat-icon>face</mat-icon> Who We Are</a>
+      </mat-toolbar-row>
+      <mat-toolbar-row>
+        <a mat-button routerLink="/buy-from-us"><mat-icon>shopping_cart</mat-icon> Buy From Us</a>
+      </mat-toolbar-row>
+      <mat-toolbar-row>
+        <a mat-button routerLink="/what-we-did"><mat-icon>star</mat-icon> What We Did</a>
+      </mat-toolbar-row>
+    </div>
+  </div>
   </mat-toolbar>

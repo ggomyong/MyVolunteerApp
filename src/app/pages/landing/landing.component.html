@@ -6,7 +6,7 @@
         <h3>Begins In Community</h3>
     </div>
 </div>
-<mat-grid-list cols="3">
+<mat-grid-list cols="{{breakpoint}}" (window:resize)="onResize()">
     <mat-grid-tile *ngFor="let page of pages">
       <mat-card class="product-card">
         <mat-card-header>

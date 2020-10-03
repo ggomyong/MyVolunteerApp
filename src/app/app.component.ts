@@ -10,7 +10,7 @@ import { DomSanitizer } from "@angular/platform-browser";
 })
 
 export class AppComponent  {
-  title = 'MyGames';
+  title = 'My Volunteer App';
 
   constructor(private matIconRegistry: MatIconRegistry, private domSanitizer: DomSanitizer){
     /*
