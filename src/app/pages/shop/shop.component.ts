@@ -17,13 +17,14 @@ export class ShopComponent implements OnInit {
 
   ngOnInit(): void {
     this.products=this.myProductService.getProducts();
+    this.onResize();
   }
 
-  onResize(event) {
-    if (event.target.innerWidth<=700) {
+  onResize() {
+    if (window.innerWidth<=700) {
       this.breakpoint=1;
     }
-    else if (event.target.innerWidth<=1000) {
+    else if (window.innerWidth<=1000) {
       this.breakpoint=2;
     }
     else {
